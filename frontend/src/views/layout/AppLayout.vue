@@ -36,6 +36,18 @@
                     <el-icon><Bell/></el-icon>
                     <span>公告通知管理</span>
                 </el-menu-item>
+                <el-menu-item index="/hygiene">
+                    <el-icon><Document/></el-icon>
+                    <span>卫生检查管理</span>
+                </el-menu-item>
+                <el-menu-item index="/late-returns">
+                    <el-icon><Warning/></el-icon>
+                    <span>晚归异常预警</span>
+                </el-menu-item>
+                <el-menu-item index="/visitors">
+                    <el-icon><UserFilled/></el-icon>
+                    <span>访客预约管理</span>
+                </el-menu-item>
             </el-menu>
         </el-aside>
         <el-container>

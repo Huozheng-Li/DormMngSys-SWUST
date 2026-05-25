@@ -46,6 +46,24 @@ const routes = [
                 name: 'AnnouncementList',
                 component: () => import('../views/announcement/AnnouncementList.vue'),
                 meta: {title: '公告通知管理'}
+            },
+            {
+                path: 'hygiene',
+                name: 'HygieneCheckList',
+                component: () => import('../views/hygiene/HygieneCheckList.vue'),
+                meta: {title: '卫生检查管理'}
+            },
+            {
+                path: 'late-returns',
+                name: 'LateReturnList',
+                component: () => import('../views/lateReturn/LateReturnList.vue'),
+                meta: {title: '晚归异常预警'}
+            },
+            {
+                path: 'visitors',
+                name: 'VisitorList',
+                component: () => import('../views/visitor/VisitorList.vue'),
+                meta: {title: '访客预约管理'}
             }
         ]
     }
