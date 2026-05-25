@@ -109,6 +109,7 @@ import {repairApi} from '../../api/repair'
 import {userApi} from '../../api/user'
 import {buildingApi} from '../../api/building'
 import {ElMessage} from 'element-plus'
+import auth from '../../stores/auth'
 
 const loading = ref(false)
 const list = ref([])
@@ -183,7 +184,7 @@ async function handleCreate() {
         await repairApi.create({
             title: createForm.title,
             description: createForm.description,
-            student: {id: 1},
+            student: {id: auth.user.id},
             room: {id: createForm.room.id}
         })
         ElMessage.success('报修已提交')

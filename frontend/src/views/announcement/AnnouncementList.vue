@@ -89,6 +89,7 @@ import {ref, reactive, onMounted} from 'vue'
 import {announcementApi} from '../../api/announcement'
 import {buildingApi} from '../../api/building'
 import {ElMessage, ElMessageBox} from 'element-plus'
+import auth from '../../stores/auth'
 
 const loading = ref(false)
 const list = ref([])
@@ -140,7 +141,7 @@ async function handleCreate() {
             title: createForm.title,
             content: createForm.content,
             scope: createForm.scope,
-            publisher: {id: 1}
+            publisher: {id: auth.user.id}
         }
         if (createForm.scope === 'BUILDING' && createForm.building) {
             data.building = {id: createForm.building.id}
@@ -156,7 +157,7 @@ async function handleCreate() {
 
 function viewDetail(row) {
     detail.value = row
-    announcementApi.markRead(row.id, 1)
+    announcementApi.markRead(row.id, auth.user.id)
     detailDialog.value = true
 }
 

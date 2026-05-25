@@ -99,6 +99,7 @@ import {checkinoutApi} from '../../api/checkinout'
 import {userApi} from '../../api/user'
 import {buildingApi} from '../../api/building'
 import {ElMessage} from 'element-plus'
+import auth from '../../stores/auth'
 
 const loading = ref(false)
 const list = ref([])
@@ -221,7 +222,7 @@ async function handleApprove() {
         return
     }
     try {
-        await checkinoutApi.approve(reviewItem.value.id, 1, reviewForm.bedId)
+        await checkinoutApi.approve(reviewItem.value.id, auth.user.id, reviewForm.bedId)
         ElMessage.success('审核通过')
         reviewDialog.value = false
         await fetchData()
@@ -232,7 +233,7 @@ async function handleApprove() {
 
 async function handleReject() {
     try {
-        await checkinoutApi.reject(reviewItem.value.id, 1, reviewForm.comment || '驳回')
+        await checkinoutApi.reject(reviewItem.value.id, auth.user.id, reviewForm.comment || '驳回')
         ElMessage.success('已驳回')
         reviewDialog.value = false
         await fetchData()

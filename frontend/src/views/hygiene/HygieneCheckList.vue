@@ -54,6 +54,7 @@ import {ref, reactive, onMounted} from 'vue'
 import {hygieneApi} from '../../api/hygiene'
 import {buildingApi} from '../../api/building'
 import {ElMessage, ElMessageBox} from 'element-plus'
+import auth from '../../stores/auth'
 
 const loading = ref(false)
 const list = ref([])
@@ -104,7 +105,7 @@ async function handleCreate() {
     try {
         await hygieneApi.create({
             room: {id: createForm.room.id},
-            inspector: {id: 1},
+            inspector: {id: auth.user.id},
             score: createForm.score,
             comments: createForm.comments,
             checkDate: new Date().toISOString().split('T')[0]
