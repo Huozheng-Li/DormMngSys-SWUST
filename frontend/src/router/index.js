@@ -22,6 +22,12 @@ const routes = [
                 name: 'BuildingList',
                 component: () => import('../views/building/BuildingList.vue'),
                 meta: {title: '房间床位管理'}
+            },
+            {
+                path: 'checkinout',
+                name: 'CheckInOutList',
+                component: () => import('../views/checkinout/CheckInOutList.vue'),
+                meta: {title: '入住退宿管理'}
             }
         ]
     }

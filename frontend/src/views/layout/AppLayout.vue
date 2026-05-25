@@ -20,6 +20,10 @@
                     <el-icon><HomeFilled/></el-icon>
                     <span>房间床位管理</span>
                 </el-menu-item>
+                <el-menu-item index="/checkinout">
+                    <el-icon><SwitchButton/></el-icon>
+                    <span>入住退宿管理</span>
+                </el-menu-item>
             </el-menu>
         </el-aside>
         <el-container>
