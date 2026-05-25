@@ -32,6 +32,10 @@
                     <el-icon><Money/></el-icon>
                     <span>费用收缴管理</span>
                 </el-menu-item>
+                <el-menu-item index="/announcements">
+                    <el-icon><Bell/></el-icon>
+                    <span>公告通知管理</span>
+                </el-menu-item>
             </el-menu>
         </el-aside>
         <el-container>

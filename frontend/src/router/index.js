@@ -40,6 +40,12 @@ const routes = [
                 name: 'FeeList',
                 component: () => import('../views/fee/FeeList.vue'),
                 meta: {title: '费用收缴管理'}
+            },
+            {
+                path: 'announcements',
+                name: 'AnnouncementList',
+                component: () => import('../views/announcement/AnnouncementList.vue'),
+                meta: {title: '公告通知管理'}
             }
         ]
     }
