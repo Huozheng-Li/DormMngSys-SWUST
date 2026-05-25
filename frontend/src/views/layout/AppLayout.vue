@@ -28,6 +28,10 @@
                     <el-icon><Tools/></el-icon>
                     <span>报修工单管理</span>
                 </el-menu-item>
+                <el-menu-item index="/fees">
+                    <el-icon><Money/></el-icon>
+                    <span>费用收缴管理</span>
+                </el-menu-item>
             </el-menu>
         </el-aside>
         <el-container>

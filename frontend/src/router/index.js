@@ -34,6 +34,12 @@ const routes = [
                 name: 'RepairOrderList',
                 component: () => import('../views/repair/RepairOrderList.vue'),
                 meta: {title: '报修工单管理'}
+            },
+            {
+                path: 'fees',
+                name: 'FeeList',
+                component: () => import('../views/fee/FeeList.vue'),
+                meta: {title: '费用收缴管理'}
             }
         ]
     }
