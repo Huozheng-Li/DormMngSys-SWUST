@@ -24,6 +24,10 @@
                     <el-icon><SwitchButton/></el-icon>
                     <span>入住退宿管理</span>
                 </el-menu-item>
+                <el-menu-item index="/repairs">
+                    <el-icon><Tools/></el-icon>
+                    <span>报修工单管理</span>
+                </el-menu-item>
             </el-menu>
         </el-aside>
         <el-container>

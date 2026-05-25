@@ -28,6 +28,12 @@ const routes = [
                 name: 'CheckInOutList',
                 component: () => import('../views/checkinout/CheckInOutList.vue'),
                 meta: {title: '入住退宿管理'}
+            },
+            {
+                path: 'repairs',
+                name: 'RepairOrderList',
+                component: () => import('../views/repair/RepairOrderList.vue'),
+                meta: {title: '报修工单管理'}
             }
         ]
     }
